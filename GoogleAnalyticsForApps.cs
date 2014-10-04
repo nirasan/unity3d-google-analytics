@@ -115,6 +115,18 @@ public class GoogleAnalyticsForApps
 		MakeRequest(postParams);
 	}
 	
+	public void TrackScreenview(string _contentDescription){
+		
+		WWWForm postParams = new WWWForm();
+		
+		AddDefaultFields(ref postParams);
+		
+		postParams.AddField("t","screenview");
+		postParams.AddField("cd",_contentDescription);
+		
+		MakeRequest(postParams);
+	}
+	
 	// not working correctly: this appears as a separat user
 	public void TrackTiming(string _category,string _userTimingVarName,string _timingLabel,int _timeInMS){
 		

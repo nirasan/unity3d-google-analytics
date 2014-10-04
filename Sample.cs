@@ -13,7 +13,7 @@ public class Sample : MonoBehaviour
 		ga.analytics.TrackSession(true);
 		
 		// tracking screens
-		ga.analytics.TrackAppview("SampleScreen");
+		ga.analytics.TrackScreenview("SampleScreen");
 		
 		// track some event
 		ga.analytics.TrackEvent("eventCategory","eventLabel","eventAction",1234);
